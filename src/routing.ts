@@ -6,7 +6,6 @@ import { Application } from "express";
 
 const routes = (app: Application) => {
   // app.use('/api', droneRoutes);
-
   app.get("/healthcheck", (_, res) => res.status(200).send("OK"));
   // app.get('/version', (_, res) => res.status(200).send(packageJson.version));
 };
