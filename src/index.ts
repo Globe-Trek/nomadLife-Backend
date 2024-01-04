@@ -1,13 +1,22 @@
-import express, { Request, Response } from "express";
+import express, { Application } from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import 'dotenv/config';
 
-const app = express();
-const port = 3000;
+import routing from './routing';
 
-app.get("/", (_req: Request, res: Response) => {
-  res.send("Hello world");
-  res.statusCode = 200;
-});
+import Constants from './shared/domain/serverConstants';
+import connectDB from './shared/infrastracture/connection';
 
-app.listen(port, () => {
-  console.log(`Server app listening on port ${port}!`);
+const app: Application = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+
+routing(app);
+
+connectDB();
+
+app.listen(Constants.PORT, () => {
+  console.log(`Server is running on port ${Constants.PORT}`);
 });
