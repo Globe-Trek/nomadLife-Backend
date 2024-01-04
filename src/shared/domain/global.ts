@@ -1,11 +1,11 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response } from "express";
 
 export interface IObj {
   [key: string]: any;
 }
 
-export interface IReq extends Request { }
+export interface IReq extends Request {}
 
-export interface IRes extends Response { }
+export interface IRes extends Response {}
 
-export interface INext extends NextFunction { }
+export interface INext extends NextFunction {}

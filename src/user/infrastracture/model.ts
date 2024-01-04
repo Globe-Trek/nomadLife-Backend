@@ -1,9 +1,9 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  title: String, 
+  title: String,
   author: String,
   body: String,
   comments: [{ body: String, date: Date }],
@@ -11,10 +11,10 @@ const userSchema = new Schema({
   hidden: Boolean,
   meta: {
     votes: Number,
-    favs: Number
-  }
+    favs: Number,
+  },
 });
 
-const User = mongoose.model('user', userSchema);
+const User = mongoose.model("user", userSchema);
 
 export default User;
