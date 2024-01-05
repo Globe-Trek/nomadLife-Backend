@@ -30,7 +30,6 @@ Please follow the sequence of the commands to load the dummy data without proble
 
 In the folder postmanFiles you will find the API collections of this API.
 
-
 ## Audit Working
 
 The audit logs are saving in the database and are gathering every 1 minute.

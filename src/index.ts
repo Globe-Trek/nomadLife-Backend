@@ -5,8 +5,8 @@ import 'dotenv/config';
 
 import routing from './routing';
 
-import Constants from './shared/domain/serverConstants';
-import connectDB from './shared/infrastracture/connection';
+import connectDB from '@shared/infrastructure/infrastructure';
+import Constants from '@shared/domain/serverConstants';
 
 const app: Application = express();
 
