@@ -1,12 +1,12 @@
-import express, { Application } from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import "dotenv/config";
+import express, { Application } from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import 'dotenv/config';
 
-import routing from "./routing";
+import routing from './routing';
 
-import connectDB from "@shared/infrastructure/infrastructure";
-import Constants from "@shared/domain/serverConstants";
+import connectDB from '@shared/infrastructure/infrastructure';
+import Constants from '@shared/domain/serverConstants';
 
 const app: Application = express();
 
