@@ -1,11 +1,11 @@
 import { Application } from 'express';
 
-// import droneRoutes from '../cache/api/drones/infrastructure/route';
+import authRoutes from './auth/infrastracture/route';
 
 // import packageJson from '../package.json';
 
 const routes = (app: Application) => {
-  // app.use('/api', droneRoutes);
+  app.use('/api/v1', authRoutes);
   app.get('/healthcheck', (_, res) => res.status(200).send('OK'));
   // app.get('/version', (_, res) => res.status(200).send(packageJson.version));
 };
